@@ -32,9 +32,9 @@ export default function Hero() {
           </span>
 
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
-            {SITE_CONFIG.name.split(" ")[0]}{" "}
+            {SITE_CONFIG.firstName}{" "}
             <span className="bg-gradient-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent">
-              {SITE_CONFIG.name.split(" ")[1]}
+              {SITE_CONFIG.lastName}
             </span>
           </h1>
 

@@ -1,6 +1,7 @@
 export const SITE_CONFIG = {
   name: "Antonio Rusak",
   firstName: "Antonio",
+  lastName: "Rusak",
   role: "Software Developer",
   email: "rusak.ant@gmail.com",
   github: {
