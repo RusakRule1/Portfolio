@@ -1,11 +1,10 @@
 import { GitHubRepo } from "./types";
-
-const GITHUB_USERNAME = "RusakRule1";
+import { SITE_CONFIG } from "./config";
 
 export async function getGitHubRepos(): Promise<GitHubRepo[]> {
   try {
     const res = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=20&type=public`,
+      `https://api.github.com/users/${SITE_CONFIG.github.username}/repos?sort=updated&per_page=20&type=public`,
       {
         next: { revalidate: 3600 },
         headers: {
