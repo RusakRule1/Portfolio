@@ -1,12 +1,28 @@
-# Portfolio
+# Antonio Rusak — Portfolio
 
-Personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
+Personal portfolio website showcasing my projects and skills.
+
+## Live Demo
+
+[antonio-rusak-portfolio.vercel.app](https://antonio-rusak-portfolio.vercel.app)
 
 ## Tech Stack
 
-- [Next.js 14](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
+- **Framework** — Next.js 14 (App Router)
+- **Styling** — Tailwind CSS v4
+- **Animations** — Framer Motion
+- **Icons** — Lucide React
+- **Language** — TypeScript
+- **Deployment** — Vercel
+- **Data** — GitHub REST API
+
+## Features
+
+- Light / Dark mode
+- Responsive design (mobile, tablet, desktop)
+- Projects automatically fetched from GitHub API
+- Scroll progress indicator
+- Optimized for performance (SSG + ISR)
 
 ## Getting Started
 
