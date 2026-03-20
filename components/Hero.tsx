@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, GitBranch, Mail, Linkedin } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -54,31 +54,6 @@ export default function Hero() {
               className="px-6 py-3 border-2 border-slate-200 dark:border-white/10 hover:border-violet-300 dark:hover:border-white/30 text-slate-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-white text-sm font-semibold rounded-xl transition-all"
             >
               Contact Me
-            </a>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/RusakRule1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 dark:text-gray-500 hover:text-violet-600 dark:hover:text-white transition-colors"
-            >
-              <GitBranch size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/antonio-r-5b3705335"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-400 dark:text-gray-500 hover:text-violet-600 dark:hover:text-white transition-colors"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="mailto:rusak.ant@gmail.com"
-              className="text-slate-400 dark:text-gray-500 hover:text-violet-600 dark:hover:text-white transition-colors"
-            >
-              <Mail size={20} />
             </a>
           </div>
         </motion.div>
