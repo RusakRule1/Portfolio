@@ -3,16 +3,17 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
+import Container from "@/components/Container";
+import { SITE_CONFIG } from "@/lib/config";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden pt-16">
+    <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-16">
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-violet-100 dark:bg-violet-900/20 rounded-full blur-3xl opacity-60" />
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-indigo-100 dark:bg-indigo-900/20 rounded-full blur-3xl opacity-60" />
       <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-cyan-100 dark:bg-cyan-900/20 rounded-full blur-3xl opacity-40" />
 
-      <div className="relative max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* Left — text */}
+      <Container className="relative w-full grid md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
@@ -27,13 +28,13 @@ export default function Hero() {
           </div>
 
           <span className="px-4 py-1.5 text-xs font-semibold text-violet-700 dark:text-violet-300 bg-violet-100 dark:bg-violet-900/30 rounded-full tracking-widest uppercase">
-            Software Developer
+            {SITE_CONFIG.role}
           </span>
 
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
-            Antonio{" "}
+            {SITE_CONFIG.name.split(" ")[0]}{" "}
             <span className="bg-gradient-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent">
-              Rusak
+              {SITE_CONFIG.name.split(" ")[1]}
             </span>
           </h1>
 
@@ -58,7 +59,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right — photo */}
         <motion.div
           initial={{ opacity: 0, x: 24 }}
           animate={{ opacity: 1, x: 0 }}
@@ -71,7 +71,7 @@ export default function Hero() {
             <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white dark:border-white/10 shadow-2xl shadow-violet-200 dark:shadow-violet-900/20">
               <Image
                 src="/slika.jpg"
-                alt="Antonio Rusak"
+                alt={SITE_CONFIG.name}
                 fill
                 className="object-cover"
                 priority
@@ -79,7 +79,7 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-      </div>
+      </Container>
 
       <motion.div
         className="absolute bottom-10"
