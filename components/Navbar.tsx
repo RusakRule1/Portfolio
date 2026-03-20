@@ -32,7 +32,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <span className="font-bold text-slate-900 dark:text-white tracking-tight">
           {SITE_CONFIG.name.split(" ")[0]}
           <span className="text-violet-600">.</span>
