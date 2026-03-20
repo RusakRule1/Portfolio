@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Menu, X } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/config";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -23,8 +24,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -33,12 +32,12 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <span className="font-bold text-slate-900 dark:text-white tracking-tight">
-          Antonio<span className="text-violet-600">.</span>
+          {SITE_CONFIG.name.split(" ")[0]}
+          <span className="text-violet-600">.</span>
         </span>
 
-        {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
@@ -63,7 +62,6 @@ export default function Navbar() {
           )}
         </ul>
 
-        {/* Mobile buttons */}
         <div className="flex md:hidden items-center gap-2">
           {mounted && (
             <button
@@ -84,14 +82,13 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur border-b border-slate-100 dark:border-white/5 px-6 py-4 flex flex-col gap-4">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              onClick={closeMenu}
+              onClick={() => setMenuOpen(false)}
               className="text-sm font-medium text-slate-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-white transition-colors"
             >
               {link.label}
