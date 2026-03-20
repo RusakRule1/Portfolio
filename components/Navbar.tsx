@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -13,6 +13,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -21,6 +22,8 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header
@@ -35,7 +38,8 @@ export default function Navbar() {
           Antonio<span className="text-violet-600">.</span>
         </span>
 
-        <ul className="flex items-center gap-8">
+        {/* Desktop nav */}
+        <ul className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -46,7 +50,6 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-
           {mounted && (
             <li>
               <button
@@ -59,7 +62,43 @@ export default function Navbar() {
             </li>
           )}
         </ul>
+
+        {/* Mobile buttons */}
+        <div className="flex md:hidden items-center gap-2">
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="p-2 rounded-lg text-slate-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-white transition-all"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+          )}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 rounded-lg text-slate-500 dark:text-gray-400 hover:text-violet-600 dark:hover:text-white transition-all"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur border-b border-slate-100 dark:border-white/5 px-6 py-4 flex flex-col gap-4">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className="text-sm font-medium text-slate-600 dark:text-gray-300 hover:text-violet-600 dark:hover:text-white transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
     </header>
   );
 }
