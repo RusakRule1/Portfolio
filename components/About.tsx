@@ -9,25 +9,58 @@ const SKILLS = [
     category: "Languages",
     color:
       "bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 border-violet-200 dark:border-violet-700/50",
-    items: ["JavaScript", "C#", "Java", "HTML/CSS", "SQL", "Bash"],
+    items: ["JavaScript", "TypeScript", "C#", "C++", "Java", "SQL", "Bash"],
   },
   {
     category: "Frameworks & Tools",
     color:
       "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border-indigo-200 dark:border-indigo-700/50",
-    items: [".NET", "Docker", "Git / GitHub", "Postman", "Visual Studio Code"],
+    items: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      ".NET",
+      "Entity Framework",
+      "Docker",
+      "Git / GitHub",
+      "Postman",
+      "Jira",
+      "Confluence",
+    ],
+  },
+  {
+    category: "Databases",
+    color:
+      "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-700/50",
+    items: ["SQL Server", "MySQL", "PostgreSQL"],
   },
   {
     category: "Concepts",
     color:
       "bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border-cyan-200 dark:border-cyan-700/50",
-    items: ["OOP", "Design Patterns", "MVC", "SCRUM / Agile", "UML"],
+    items: [
+      "OOP",
+      "SOLID Principles",
+      "Design Patterns",
+      "Clean Architecture",
+      "MVC",
+      "SCRUM / Agile",
+      "UML",
+      "Unit Testing",
+      "JWT / OAuth",
+    ],
   },
   {
     category: "Platforms",
     color:
       "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-700/50",
-    items: ["Windows", "Linux", "Virtualization"],
+    items: ["Windows", "Linux", "VirtualBox"],
+  },
+  {
+    category: "Soft Skills",
+    color:
+      "bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-700/50",
+    items: ["Teamwork", "Problem Solving", "Communication", "Research Skills"],
   },
 ];
 
@@ -48,7 +81,15 @@ export default function About() {
             <p>
               I&apos;m a software developer with a solid foundation in both
               frontend and backend development, built through studies and
-              hands-on projects.
+              hands-on projects. My primary languages are{" "}
+              <span className="text-slate-900 dark:text-white font-semibold">
+                Java
+              </span>{" "}
+              and{" "}
+              <span className="text-slate-900 dark:text-white font-semibold">
+                C#
+              </span>
+              , with experience across the full stack.
             </p>
             <p>
               At{" "}
