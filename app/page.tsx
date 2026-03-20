@@ -15,7 +15,7 @@ export default async function Home() {
       <About />
       <Projects repos={repos} />
       <Contact />
-      <footer className="py-8 text-center text-xs text-gray-600 border-t border-white/5">
+      <footer className="py-8 text-center text-xs text-slate-400 dark:text-gray-600 border-t border-slate-100 dark:border-white/5">
         © {new Date().getFullYear()} Antonio Rusak
       </footer>
     </main>
