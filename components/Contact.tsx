@@ -2,52 +2,45 @@
 
 import { motion } from "framer-motion";
 import { Mail, GitBranch, Linkedin } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/config";
+import Container from "@/components/Container";
+import SectionHeading from "@/components/SectionHeading";
 
 const LINKS = [
   {
     icon: Mail,
-    label: "rusak.ant@gmail.com",
-    href: "mailto:rusak.ant@gmail.com",
+    label: SITE_CONFIG.email,
+    href: `mailto:${SITE_CONFIG.email}`,
   },
   {
     icon: Linkedin,
-    label: "linkedin.com/in/antonio-r",
-    href: "https://www.linkedin.com/in/antonio-r-5b3705335",
+    label: SITE_CONFIG.linkedin.label,
+    href: SITE_CONFIG.linkedin.url,
   },
   {
     icon: GitBranch,
-    label: "github.com/RusakRule1",
-    href: "https://github.com/RusakRule1",
+    label: SITE_CONFIG.github.url.replace("https://", ""),
+    href: SITE_CONFIG.github.url,
   },
 ];
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 bg-slate-50 dark:bg-[#0d0d0d]">
-      <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-lg"
-        >
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
-            Get in Touch
-          </h2>
-          <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-600 to-indigo-500 rounded" />
-          <p className="mt-6 text-slate-500 dark:text-gray-400 leading-relaxed">
-            I&apos;m currently open to new opportunities. Whether you have a
-            question, an offer, or just want to say hi — feel free to reach out.
-          </p>
-        </motion.div>
+    <section id="contact" className="py-24 bg-slate-50 dark:bg-[#0d0d0d]">
+      <Container>
+        <SectionHeading title="Get in Touch" />
+
+        <p className="mt-6 text-slate-500 dark:text-gray-400 leading-relaxed max-w-lg">
+          I&apos;m currently open to new opportunities. Whether you have a
+          question, an offer, or just want to say hi — feel free to reach out.
+        </p>
 
         <motion.div
           className="mt-10 flex flex-col sm:flex-row gap-4"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5 }}
         >
           {LINKS.map(({ icon: Icon, label, href }) => (
             <a
@@ -65,7 +58,7 @@ export default function Contact() {
             </a>
           ))}
         </motion.div>
-      </div>
+      </Container>
     </section>
   );
 }
