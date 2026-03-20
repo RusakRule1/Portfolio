@@ -1,13 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, GitBranch } from "lucide-react";
+import { Mail, GitBranch, Linkedin } from "lucide-react";
 
 const LINKS = [
   {
     icon: Mail,
     label: "rusak.ant@gmail.com",
     href: "mailto:rusak.ant@gmail.com",
+  },
+  {
+    icon: Linkedin,
+    label: "linkedin.com/in/antonio-r",
+    href: "https://www.linkedin.com/in/antonio-r-5b3705335",
   },
   {
     icon: GitBranch,
