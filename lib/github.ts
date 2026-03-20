@@ -14,7 +14,7 @@ export async function getGitHubRepos(): Promise<GitHubRepo[]> {
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
           }),
         },
-      }
+      },
     );
 
     if (!res.ok) return [];

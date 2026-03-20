@@ -4,8 +4,16 @@ import { motion } from "framer-motion";
 import { Mail, GitBranch } from "lucide-react";
 
 const LINKS = [
-  { icon: Mail,   label: "rusak.ant@gmail.com",     href: "mailto:rusak.ant@gmail.com" },
-  { icon: GitBranch, label: "github.com/RusakRule1",    href: "https://github.com/RusakRule1" },
+  {
+    icon: Mail,
+    label: "rusak.ant@gmail.com",
+    href: "mailto:rusak.ant@gmail.com",
+  },
+  {
+    icon: GitBranch,
+    label: "github.com/RusakRule1",
+    href: "https://github.com/RusakRule1",
+  },
 ];
 
 export default function Contact() {
@@ -22,8 +30,8 @@ export default function Contact() {
           <h2 className="text-3xl font-bold text-white">Get in Touch</h2>
           <div className="mt-2 h-1 w-12 bg-indigo-500 rounded" />
           <p className="mt-6 text-gray-400 leading-relaxed">
-            I&apos;m currently open to new opportunities. Whether you have a question,
-            an offer, or just want to say hi — feel free to reach out.
+            I&apos;m currently open to new opportunities. Whether you have a
+            question, an offer, or just want to say hi — feel free to reach out.
           </p>
         </motion.div>
 

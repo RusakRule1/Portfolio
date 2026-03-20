@@ -20,11 +20,15 @@ export default function Projects({ repos }: Props) {
         >
           <h2 className="text-3xl font-bold text-white">Projects</h2>
           <div className="mt-2 h-1 w-12 bg-indigo-500 rounded" />
-          <p className="mt-4 text-gray-400 text-sm">Public repositories from GitHub, automatically updated.</p>
+          <p className="mt-4 text-gray-400 text-sm">
+            Public repositories from GitHub, automatically updated.
+          </p>
         </motion.div>
 
         {repos.length === 0 ? (
-          <p className="mt-12 text-gray-600 text-sm">Could not load projects at this time.</p>
+          <p className="mt-12 text-gray-600 text-sm">
+            Could not load projects at this time.
+          </p>
         ) : (
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {repos.map((repo, i) => (
@@ -33,8 +37,18 @@ export default function Projects({ repos }: Props) {
           </div>
         )}
 
-        <motion.div className="mt-10 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-          <a href="https://github.com/RusakRule1" target="_blank" rel="noopener noreferrer" className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+        <motion.div
+          className="mt-10 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <a
+            href="https://github.com/RusakRule1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors"
+          >
             View all on GitHub →
           </a>
         </motion.div>

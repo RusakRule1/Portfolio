@@ -21,7 +21,9 @@ interface Props {
 }
 
 export default function ProjectCard({ repo, index }: Props) {
-  const langColor = repo.language ? LANGUAGE_COLORS[repo.language] ?? "#6b7280" : null;
+  const langColor = repo.language
+    ? (LANGUAGE_COLORS[repo.language] ?? "#6b7280")
+    : null;
 
   return (
     <motion.div
@@ -37,11 +39,21 @@ export default function ProjectCard({ repo, index }: Props) {
         </h3>
         <div className="flex items-center gap-2 shrink-0">
           {repo.homepage && (
-            <a href={repo.homepage} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+            <a
+              href={repo.homepage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-white transition-colors"
+            >
               <ExternalLink size={15} />
             </a>
           )}
-          <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+          <a
+            href={repo.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-white transition-colors"
+          >
             <GitBranch size={15} />
           </a>
         </div>
@@ -54,15 +66,24 @@ export default function ProjectCard({ repo, index }: Props) {
       <div className="flex items-center justify-between mt-auto">
         <div className="flex items-center gap-4 text-xs text-gray-500">
           {repo.stargazers_count > 0 && (
-            <span className="flex items-center gap-1"><Star size={12} />{repo.stargazers_count}</span>
+            <span className="flex items-center gap-1">
+              <Star size={12} />
+              {repo.stargazers_count}
+            </span>
           )}
           {repo.forks_count > 0 && (
-            <span className="flex items-center gap-1"><GitFork size={12} />{repo.forks_count}</span>
+            <span className="flex items-center gap-1">
+              <GitFork size={12} />
+              {repo.forks_count}
+            </span>
           )}
         </div>
         {repo.language && (
           <span className="flex items-center gap-1.5 text-xs text-gray-400">
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: langColor ?? "#6b7280" }} />
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: langColor ?? "#6b7280" }}
+            />
             {repo.language}
           </span>
         )}

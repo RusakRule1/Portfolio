@@ -3,10 +3,19 @@
 import { motion } from "framer-motion";
 
 const SKILLS = [
-  { category: "Languages",        items: ["JavaScript", "C#", "Java", "HTML/CSS", "SQL", "Bash"] },
-  { category: "Frameworks & Tools", items: [".NET", "Docker", "Git / GitHub", "Postman", "Visual Studio Code"] },
-  { category: "Concepts",         items: ["OOP", "Design Patterns", "MVC", "SCRUM / Agile", "UML"] },
-  { category: "Platforms",        items: ["Windows", "Linux", "Virtualization"] },
+  {
+    category: "Languages",
+    items: ["JavaScript", "C#", "Java", "HTML/CSS", "SQL", "Bash"],
+  },
+  {
+    category: "Frameworks & Tools",
+    items: [".NET", "Docker", "Git / GitHub", "Postman", "Visual Studio Code"],
+  },
+  {
+    category: "Concepts",
+    items: ["OOP", "Design Patterns", "MVC", "SCRUM / Agile", "UML"],
+  },
+  { category: "Platforms", items: ["Windows", "Linux", "Virtualization"] },
 ];
 
 export default function About() {
@@ -24,18 +33,22 @@ export default function About() {
             className="space-y-4 text-gray-400 leading-relaxed"
           >
             <p>
-              I&apos;m a software developer with a solid foundation in both frontend and backend
-              development, built through studies and hands-on projects.
+              I&apos;m a software developer with a solid foundation in both
+              frontend and backend development, built through studies and
+              hands-on projects.
             </p>
             <p>
-              At <span className="text-white">SICK Mobilisis</span>, I gained real-world experience
-              in a Scrum environment, where I was responsible for C#/.NET backend development
-              connected to a Dockerized database.
+              At <span className="text-white">SICK Mobilisis</span>, I gained
+              real-world experience in a Scrum environment, where I was
+              responsible for C#/.NET backend development connected to a
+              Dockerized database.
             </p>
             <p>
               I recently completed my{" "}
-                <span className="text-white">Master&apos;s degree in Information and Software Engineering</span>{" "}
-                at the Faculty of Organization and Informatics, Varaždin.
+              <span className="text-white">
+                Master&apos;s degree in Information and Software Engineering
+              </span>{" "}
+              at the Faculty of Organization and Informatics, Varaždin.
             </p>
           </motion.div>
 
@@ -53,7 +66,10 @@ export default function About() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((skill) => (
-                    <span key={skill} className="px-3 py-1 text-sm bg-white/5 border border-white/8 rounded-full text-gray-300">
+                    <span
+                      key={skill}
+                      className="px-3 py-1 text-sm bg-white/5 border border-white/8 rounded-full text-gray-300"
+                    >
                       {skill}
                     </span>
                   ))}
