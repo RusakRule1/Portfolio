@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
+import { SITE_CONFIG } from "@/lib/config";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Antonio Rusak | Portfolio",
-  description: "Personal portfolio of Antonio Rusak — software developer.",
+  title: `${SITE_CONFIG.name} | Portfolio`,
+  description: `Personal portfolio of ${SITE_CONFIG.name} — ${SITE_CONFIG.role}.`,
 };
 
 export default function RootLayout({
