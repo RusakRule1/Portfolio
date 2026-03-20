@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Container from "@/components/Container";
+import SectionHeading from "@/components/SectionHeading";
 
 const SKILLS = [
   {
@@ -31,8 +33,8 @@ const SKILLS = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-slate-50 dark:bg-[#0d0d0d]">
-      <div className="max-w-5xl mx-auto">
+    <section id="about" className="py-24 bg-slate-50 dark:bg-[#0d0d0d]">
+      <Container>
         <SectionHeading title="About Me" />
 
         <div className="mt-12 grid md:grid-cols-2 gap-12">
@@ -92,18 +94,7 @@ export default function About() {
             ))}
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
-  );
-}
-
-function SectionHeading({ title }: { title: string }) {
-  return (
-    <div>
-      <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
-        {title}
-      </h2>
-      <div className="mt-2 h-1 w-12 bg-gradient-to-r from-violet-600 to-indigo-500 rounded" />
-    </div>
   );
 }
