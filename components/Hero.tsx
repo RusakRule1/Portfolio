@@ -73,6 +73,7 @@ export default function Hero() {
                 src="/slika.jpg"
                 alt={SITE_CONFIG.name}
                 fill
+                sizes="(max-width: 640px) 256px, 288px"
                 className="object-cover"
                 priority
               />
