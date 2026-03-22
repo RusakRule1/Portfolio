@@ -70,7 +70,7 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-violet-600 to-indigo-500 -rotate-3 opacity-10" />
             <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white dark:border-white/10 shadow-2xl shadow-violet-200 dark:shadow-violet-900/20">
               <Image
-                src="/slika.jpg"
+                src="/slika.jpeg"
                 alt={SITE_CONFIG.name}
                 fill
                 sizes="(max-width: 640px) 256px, 288px"
