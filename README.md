@@ -8,7 +8,7 @@ Personal portfolio website showcasing my projects and skills.
 
 ## Tech Stack
 
-- **Framework** — Next.js 14 (App Router)
+- **Framework** — Next.js 16.2.0 (App Router)
 - **Styling** — Tailwind CSS v4
 - **Animations** — Framer Motion
 - **Icons** — Lucide React
