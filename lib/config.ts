@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   firstName: "Antonio",
   lastName: "Rusak",
   role: "Software Developer",
-  email: "rusak.ant@gmail.com",
+  email: "antonio@rusak.eu",
   github: {
     username: "RusakRule1",
     url: "https://github.com/RusakRule1",
