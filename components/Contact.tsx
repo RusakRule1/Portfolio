@@ -13,11 +13,6 @@ const LINKS = [
     href: `mailto:${SITE_CONFIG.email}`,
   },
   {
-    icon: Linkedin,
-    label: SITE_CONFIG.linkedin.label,
-    href: SITE_CONFIG.linkedin.url,
-  },
-  {
     icon: GitBranch,
     label: SITE_CONFIG.github.url.replace("https://", ""),
     href: SITE_CONFIG.github.url,
