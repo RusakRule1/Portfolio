@@ -7,9 +7,5 @@ export const SITE_CONFIG = {
   github: {
     username: "RusakRule1",
     url: "https://github.com/RusakRule1",
-  },
-  linkedin: {
-    url: "https://www.linkedin.com/in/antonio-r-5b3705335",
-    label: "linkedin.com/in/antonio-r",
-  },
+  }
 } as const;
